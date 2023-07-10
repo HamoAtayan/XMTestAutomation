@@ -7,7 +7,7 @@ import com.xm.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class VerifyUpdatingCalendarEvents extends BaseUiTest {
+public class VerifyUpdatingCalendarEventsTest extends BaseUiTest {
 
     @Test
     public void verifyUpdatingCalendarEvents() {

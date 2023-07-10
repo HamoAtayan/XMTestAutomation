@@ -3,13 +3,12 @@
 <suite name="Tests">
     <test name="Tests">
         <packages>
-<!--            <package name="com.cognaize.tests.*"/>-->
-            <package name="com.xm.ui_tests.LoginUiTest"/>
+            <package name="com.xm.ui_tests.VerifyUpdatingCalendarEventsTest"/>
+            <package name="com.xm.api_tests.GetApiTests"/>
         </packages>
     </test>
 
     <listeners>
-        <!--        <listener class-name="com.cognaize.listeners.UiListeners"/>-->
         <listener class-name="com.xm.listeners.ApiListeners"/>
     </listeners>
 

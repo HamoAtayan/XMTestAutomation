@@ -55,6 +55,10 @@ public final class CommonHelper {
         return formattedDate;
     }
 
+    public static String getNumberFromTheUrl(String url) {
+        String[] parts = url.split("/");
+        return parts[parts.length - 1];
+    }
 
     private CommonHelper() {
         throw new UnsupportedOperationException("Not allowed to crate an instance of CommonHelper class");

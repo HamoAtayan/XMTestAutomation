@@ -1,6 +1,5 @@
 package com.xm.api_tests;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.xm.api.ExpectedData;
 import com.xm.api.Requests;
 import com.xm.api.dto.FilmDto;
@@ -14,12 +13,10 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.List;
 
-public class GetAllTest extends BaseApiTest {
+public class GetApiTests extends BaseApiTest {
 
     @Test
     public void verifyUpdatingCalendarEvents() throws IOException {
-
-
         Requests requests = new Requests();
 
         Response getAllFilmsResponse = requests.getData(getUrl(), "films");
@@ -31,7 +28,6 @@ public class GetAllTest extends BaseApiTest {
                 .filter(film -> film.getTitle().equals(ExpectedData.TITLE.getValue()))
                 .findFirst()
                 .orElse(null);
-
 
         assert requiredFilm != null;
         Response biggsDarklighterResponse = requiredFilm.getCharacters().stream()
