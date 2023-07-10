@@ -50,20 +50,21 @@ public interface ComponentHelper {
         }
     }
 
-    default  void scrollUntilClickable(WebElement element) {
+    default void scrollUntilClickable(WebElement element) {
         JavascriptExecutor jsExecutor = (JavascriptExecutor) getDriver();
         while (true) {
             try {
                 if (element.isDisplayed() && element.isEnabled()) {
+                    element.click();
                     break;
                 }
-            } catch (NoSuchElementException e) {
+            } catch (NoSuchElementException | ElementClickInterceptedException e) {
                 jsExecutor.executeScript("arguments[0].scrollIntoView(true);", element);
             }
         }
     }
 
-    default void click(WebElement element){
+    default void click(WebElement element) {
         scrollUntilClickable(element);
         element.click();
     }

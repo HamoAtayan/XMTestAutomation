@@ -26,7 +26,7 @@ public abstract class BaseUiTest {
     public void setUp() {
         DriverHelper driverHelper =  DriverHelper.getInstance();
         driver = driverHelper.initDriver();
-        driver.manage().window().setSize(new Dimension(1024,768));
+        driver.manage().window().maximize();
     }
 
     @AfterTest

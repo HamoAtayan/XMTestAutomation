@@ -7,10 +7,10 @@ import com.xm.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginUiTest extends BaseUiTest {
+public class VerifyUpdatingCalendarEvents extends BaseUiTest {
 
     @Test
-    public void verifyLoginFunctionality() {
+    public void verifyUpdatingCalendarEvents() {
         HomePage homePage = new HomePage(driver);
         EconomicCalendarPage economicCalendarPage = new EconomicCalendarPage(driver);
         homePage.get();

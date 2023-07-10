@@ -33,7 +33,6 @@ public  class BasePage<T extends LoadableComponent<T>> extends LoadableComponent
     @Override
     protected void load() {
         driver.get(serverUrl + pagePath);
-        WaitHelper.waitUntilPageLoads(driver);
     }
 
 
