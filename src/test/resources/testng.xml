@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Tests">
+    <test name="Tests">
+        <packages>
+<!--            <package name="com.cognaize.tests.*"/>-->
+            <package name="com.xm.ui_tests.LoginUiTest"/>
+        </packages>
+    </test>
+
+    <listeners>
+        <!--        <listener class-name="com.cognaize.listeners.UiListeners"/>-->
+        <listener class-name="com.xm.listeners.ApiListeners"/>
+    </listeners>
+
+</suite>
